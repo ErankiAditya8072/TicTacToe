@@ -1,0 +1,103 @@
+body{
+    background-color:#E0E5EC;
+}
+#centering{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    height:400px;
+    width:350px;
+    background-color:none;
+    box-shadow:6px 6px 15px rgb(163,177,198,0.4),
+               -6px -6px 15px rgba(255,255,255,0.7);
+            
+    border-radius:15px;
+    
+}
+.show{
+    width:100px;
+    height:40px;
+    margin-top:6%;
+    margin-bottom:5%;
+    margin-left:15%;
+    margin-right:2%;
+    outline:none;
+    border:none;
+    border-bottom:3px solid #374785 ;
+    color:#374785;
+    padding:3px;
+    font-size:20px;
+    font-weight:lighter;
+    background-color:#E0E5EC;
+    
+}
+.show1{
+    width:100px;
+    height:40px;
+    margin-top:6%;
+    margin-bottom:5%;
+    margin-left:9%;
+    margin-right:2%;
+    outline:none;
+    border:none;
+    padding:3px;
+    font-size:20px;
+    font-weight: bold;
+    background-color:#E0E5EC;
+    color:#32a3b1;
+}
+#restart{
+    margin-top:5%;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-left:18%;
+    width:230px;
+    border:2px solid rgb(15,77,146);
+    background-color:#E0E5EC;
+    font-size:18px;
+    font-family:sans-serif;
+    color:rgb(15,77,146);
+    cursor:pointer;
+
+}
+
+#centerbox{
+    width:250px;
+    height:220px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction:column;
+    align-content:center;
+   
+}
+table{
+   
+    border-collapse:collapse;
+    table-layout:fixed;
+    padding:5px;
+}
+td{
+   text-align:center;
+   width:50px;
+   height:50px;
+   font-family:sans-serif;
+   font-size:20px;
+   font-weight:bold;
+}
+tr:first-child td:nth-child(1),tr:first-child td:nth-child(2),tr:nth-child(2) td:nth-child(1) ,tr:nth-child(2) td:nth-child(2){
+    border-bottom:3px solid #5d8aa8;
+    border-right:3px solid #5d8aa8;
+}
+tr:first-child td:nth-child(3) , tr:nth-child(2) td:nth-child(3){
+    border-bottom:3px solid #5d8aa8;
+}
+tr:nth-child(3) td:nth-child(1), tr:nth-child(3) td:nth-child(2){
+    border-right:3px solid #5d8aa8;
+}
+
+
+
+
