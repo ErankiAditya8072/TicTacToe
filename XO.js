@@ -46,16 +46,31 @@ function gameplay() {
              if(i==1)
              {
              $('#centerbox').html("<p>X</p><p>!! Winner !!</p>");
-             $('#centerbox p').css({'color':'#374785','font-size':'+=16','font-family':'sans-serif'}).hide().fadeIn(500);
              $('#bt2').css('border-bottom','none');
              $('#bt1').css('border-bottom','3px solid #374785');
+             if($(window).width() < 600)
+             {  
+                 console.log("reached Inside this 500px");
+                $('#centerbox p').css({'color':'#374785','font-size':'+=10','font-family':'sans-serif'}).hide().fadeIn(500);
+             }
+             else
+             {
+             $('#centerbox p').css({'color':'#374785','font-size':'+=12','font-family':'sans-serif'}).hide().fadeIn(500);
+             }
             }
             else
             {
             $('#centerbox').html("<p>O</p><p>!! Winner !!</p>");
-            $('#centerbox p').css({'color':'#32a3b1','font-size':'+=16','font-family':'sans-serif'}).hide().fadeIn(500);
             $('#bt1').css('border-bottom','none');  
             $('#bt2').css('border-bottom','3px solid #32a3b1');
+            if($(document).width() < 600)
+            {
+                $('#centerbox p').css({'color':'#32a3b1','font-size':'+=10','font-family':'sans-serif'}).hide().fadeIn(500);
+            }
+            else
+            {
+                $('#centerbox p').css({'color':'#32a3b1','font-size':'+=12','font-family':'sans-serif'}).hide().fadeIn(500);
+            }
         }
        }
            if(a === undefined && count==9)
@@ -63,9 +78,16 @@ function gameplay() {
             console.log(a);
             $('table').fadeOut(1000).remove();
             $('#centerbox').append("<p>X O</p><p>Draw!</p>");
-            $('#centerbox p').css({'color':'#374785','font-size':'+=16','font-family':'sans-serif'}).hide().fadeIn(500);
             $('#bt2').css('border-bottom','#32a3b1');
             $('#bt1').css('border-bottom','#374785');
+            if($(document).width() < 600)
+            {
+                $('#centerbox p').css({'color':'#374785','font-size':'+=10','font-family':'sans-serif'}).hide().fadeIn(500);
+            }
+            else
+            {
+                $('#centerbox p').css({'color':'#374785','font-size':'+=12','font-family':'sans-serif'}).hide().fadeIn(500);
+            }
            }
     
            }

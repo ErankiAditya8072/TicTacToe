@@ -1,5 +1,6 @@
 body{
     background-color:#E0E5EC;
+    margin:2%;
 }
 #centering{
     position:absolute;
@@ -56,6 +57,7 @@ body{
     border:2px solid rgb(15,77,146);
     background-color:#E0E5EC;
     font-size:18px;
+    font-weight:bold;
     font-family:sans-serif;
     color:rgb(15,77,146);
     cursor:pointer;
@@ -97,7 +99,40 @@ tr:first-child td:nth-child(3) , tr:nth-child(2) td:nth-child(3){
 tr:nth-child(3) td:nth-child(1), tr:nth-child(3) td:nth-child(2){
     border-right:3px solid #5d8aa8;
 }
+@media screen and (max-width:500px){
+ 
+ #centering{
+     width:280px;
+     height:350px;
+    
+ }
+ .show{
+    width:60px;
+    height:40px;
+    font-weight:bold;
+    margin-left:22%;
+}
+#centerbox{
+    width:160px;
+    height:180px;
+   
+}
+.show1{
+    width:60px;
+    height:40px;
+    margin-left:10%;
+}
+td{
+    width:40px;
+   height:40px;
+   font-size:16px;
+}
+#restart{
+    width:160px;
+    font-size:16px;
+    font-weight:bold;
+    margin-top:5%;
+    margin-left:22%;
+}
 
-
-
-
+}
