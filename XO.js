@@ -7,8 +7,8 @@ $(function(){
                  '<td></td><td></td ><td></td></tr>'+
                 '<tr class="tic"><td></td><td></td><td></td></tr>'+
                 '<tr class="tic"><td></td><td></td><td></td></tr>'+'</table>').hide().fadeIn(500));
-                $('#bt1').css({'color':'#374785','border':'6px solid #E0E5EC','box-shadow':'2px 2px 3px rgba(163,177,198,0.5),-2px -2px 3px rgba(255,255,255,0.5),inset 2px 2px 2px rgb(163,177,198,0.9),inset -2px -2px 2px rgba(255,255,255,0.5)'});
-                $('#bt2').css('color','#32a3b1');
+                $('#bt1').css({'color':'#374785','border':'none','box-shadow':'2px 2px 3px rgba(163,177,198,0.5), -2px -2px 3px rgba(255,255,255,0.5)'});
+                $('#bt2').css({'color':'#32a3b1','border':'6px solid #E0E5EC','box-shadow':'2px 2px 3px rgba(163,177,198,0.5),-2px -2px 3px rgba(255,255,255,0.5),inset 2px 2px 2px rgb(163,177,198,0.9),inset -2px -2px 2px rgba(255,255,255,0.5)'});
                 gameplay();
      });
 });
@@ -20,16 +20,16 @@ function gameplay() {
         e.preventDefault();
         if(i==0 && $(this).text()==""){
             $(this).text("X").css('color','#374785').hide().fadeIn(200);
-            $('#bt1').css({'color':'373785','border':'none','box-shadow':'2px 2px 3px rgba(163,177,198,0.5), -2px -2px 3px rgba(255,255,255,0.5)'});
-            $('#bt2').css({'color':'#32a3b1','border':'6px solid #E0E5EC','box-shadow':'2px 2px 3px rgba(163,177,198,0.5),-2px -2px 3px rgba(255,255,255,0.5),inset 2px 2px 2px rgb(163,177,198,0.9),inset -2px -2px 2px rgba(255,255,255,0.5)'});
+            $('#bt2').css({'color':'#32a3b1','border':'none','box-shadow':'2px 2px 3px rgba(163,177,198,0.5), -2px -2px 3px rgba(255,255,255,0.5)'});
+            $('#bt1').css({'color':'#373785','border':'6px solid #E0E5EC','box-shadow':'2px 2px 3px rgba(163,177,198,0.5),-2px -2px 3px rgba(255,255,255,0.5),inset 2px 2px 2px rgb(163,177,198,0.9),inset -2px -2px 2px rgba(255,255,255,0.5)'});
             $(this).removeClass('empty');
             i=1;
             count++;
         }
         else if($(this).text() == ""){
             $(this).text("O").css('color','#32a3b1').hide().fadeIn(200);
-            $('#bt2').css({'color':'#32a3b1','border':'none','box-shadow':'2px 2px 3px rgba(163,177,198,0.5), -2px -2px 3px rgba(255,255,255,0.5)'});
-            $('#bt1').css({'color':'#373785','border':'6px solid #E0E5EC','box-shadow':'2px 2px 3px rgba(163,177,198,0.5),-2px -2px 3px rgba(255,255,255,0.5),inset 2px 2px 2px rgb(163,177,198,0.9),inset -2px -2px 2px rgba(255,255,255,0.5)'});
+            $('#bt1').css({'color':'#373785','border':'none','box-shadow':'2px 2px 3px rgba(163,177,198,0.5), -2px -2px 3px rgba(255,255,255,0.5)'});
+            $('#bt2').css({'color':'#32a3b1','border':'6px solid #E0E5EC','box-shadow':'2px 2px 3px rgba(163,177,198,0.5),-2px -2px 3px rgba(255,255,255,0.5),inset 2px 2px 2px rgb(163,177,198,0.9),inset -2px -2px 2px rgba(255,255,255,0.5)'});
             $(this).removeClass('empty');
          
             i=0;
@@ -55,13 +55,13 @@ function gameplay() {
              }
              else
              {
-             $('#centerbox p').css({'color':'#374785','font-size':'+=12','font-family':'sans-serif'}).hide().fadeIn(500);
+             $('#centerbox p').css({'color':'#374785','font-size':'+=12','font-family':'sans-serif','font-weight':'600'}).hide().fadeIn(500);
              }
             }
             else
             {
             $('#centerbox').html("<p>O</p><p>!! Winner !!</p>");
-            $('#bt1').css({'color':'373785','border':'none','box-shadow':'2px 2px 3px rgba(163,177,198,0.5), -2px -2px 3px rgba(255,255,255,0.5)'});
+            $('#bt1').css({'color':'#373785','border':'none','box-shadow':'2px 2px 3px rgba(163,177,198,0.5), -2px -2px 3px rgba(255,255,255,0.5)'});
             $('#bt2').css({'color':'#32a3b1','border':'6px solid #E0E5EC','box-shadow':'2px 2px 3px rgba(163,177,198,0.5),-2px -2px 3px rgba(255,255,255,0.5),inset 2px 2px 2px rgb(163,177,198,0.9),inset -2px -2px 2px rgba(255,255,255,0.5)'});
             if($(document).width() < 600)
             {
@@ -69,7 +69,7 @@ function gameplay() {
             }
             else
             {
-                $('#centerbox p').css({'color':'#32a3b1','font-size':'+=12','font-family':'sans-serif'}).hide().fadeIn(500);
+                $('#centerbox p').css({'color':'#32a3b1','font-size':'+=12','font-family':'sans-serif','font-weight':'600'}).hide().fadeIn(500);
             }
         }
        }
@@ -78,8 +78,8 @@ function gameplay() {
             console.log(a);
             $('table').fadeOut(1000).remove();
             $('#centerbox').append("<p>X O</p><p>Draw!</p>");
-            $('#bt2').css({'color':'#32a3b1','border':'6px solid #E0E5EC','box-shadow':'2px 2px 3px rgba(163,177,198,0.5),-2px -2px 3px rgba(255,255,255,0.5),inset 2px 2px 2px rgb(163,177,198,0.9),inset -2px -2px 2px rgba(255,255,255,0.5)'});
             $('#bt1').css({'color':'#373785','border':'6px solid #E0E5EC','box-shadow':'2px 2px 3px rgba(163,177,198,0.5),-2px -2px 3px rgba(255,255,255,0.5),inset 2px 2px 2px rgb(163,177,198,0.9),inset -2px -2px 2px rgba(255,255,255,0.5)'});
+            $('#bt2').css({'color':'#32a3b1','border':'6px solid #E0E5EC','box-shadow':'2px 2px 3px rgba(163,177,198,0.5),-2px -2px 3px rgba(255,255,255,0.5),inset 2px 2px 2px rgb(163,177,198,0.9),inset -2px -2px 2px rgba(255,255,255,0.5)'});
             if($(document).width() < 600)
             {
                 $('#centerbox p').css({'color':'#374785','font-size':'+=10','font-family':'sans-serif'}).hide().fadeIn(500);
